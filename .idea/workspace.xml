@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91f6f82e-2cae-48ff-a894-d345c379f22c" name="Default Changelist" comment="" />
+    <list default="true" id="91f6f82e-2cae-48ff-a894-d345c379f22c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +192,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -232,8 +237,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="133" />
-    <option name="y" value="228" />
+    <option name="x" value="274" />
+    <option name="y" value="160" />
     <option name="width" value="1587" />
     <option name="height" value="818" />
   </component>
@@ -266,6 +271,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -278,35 +284,6 @@
               <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sports" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -318,7 +295,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598609226761" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598610135162" />
     <property name="last_opened_file_path" value="E:/javaDemo/Flower/eflowerShop" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -405,16 +382,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598495312272</updated>
-      <workItem from="1598495313538" duration="42142000" />
+      <workItem from="1598495313538" duration="43307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42142000" />
+    <option name="totallyTimeSpent" value="43307000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="182" y="51" width="1587" height="818" extended-state="0" />
-    <editor active="true" />
+    <frame x="274" y="160" width="1587" height="818" extended-state="0" />
     <layout>
       <window_info id="JavaEE:App" side_tool="true" />
       <window_info id="Designer" order="0" />
@@ -422,10 +398,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.30713817" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.30713817" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.7364568" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
