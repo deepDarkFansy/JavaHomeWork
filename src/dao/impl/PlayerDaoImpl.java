@@ -19,6 +19,18 @@ public class PlayerDaoImpl extends BaseDao implements PlayerDao {
         return count;
     }
 
+    public int insertPlayer(Player player){
+        String sql = "INSERT INTO player (playerID, name, sex, age) " +
+                "VALUES (?, ?, ?, ?)";
+        String[] params = new String[4];
+        params[0] = player.getPlayerID() + "";
+        params[1] = player.getName();
+        params[2] = player.getSex()+"";
+        params[3] = player.getAge()+"";
+        int count = executeSQL(sql, params);
+        return count;
+    }
+
     @Override
     public List<Player> getPlayer(String sql, String[] param){
         List<Player> playerList = new ArrayList<>();

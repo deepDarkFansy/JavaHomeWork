@@ -31,7 +31,7 @@ public class ScoreDaoImpl extends BaseDao implements ScoreDao {
                 score.setProjectID(rs.getInt(1));
                 score.setPlayerID(rs.getInt(2));
                 score.setScore(rs.getString(3));
-                score.setRank(rs.getInt(4));
+                score.setRankIt(rs.getInt(4));
                 scorelist.add(score);
             }
         } catch (SQLException | ClassNotFoundException e) {

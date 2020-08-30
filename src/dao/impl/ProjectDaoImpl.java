@@ -22,6 +22,20 @@ public class ProjectDaoImpl extends BaseDao implements ProjectDao {
         return count;
     }
 
+    public int insertProject(Project project){
+        String sql = "INSERT INTO project (projectID, name, type, time, timeLength) " +
+                "VALUES (?, ?, ?, ?, ?)";
+        String[] params = new String [5];
+        params[0] = project.getProjectID()+"";
+        params[1] = project.getName();
+        params[2]= project.getType();
+
+        params[3] = project.getDate()+ " " + (project.getTime() + "");
+        params[4] = project.getTimeLength()+"";
+        int count = executeSQL(sql, params);
+        return count;
+    }
+
     @Override
     public List<Project> getProject(String sql, String[] param){
         List<Project> projectList = new ArrayList<>();

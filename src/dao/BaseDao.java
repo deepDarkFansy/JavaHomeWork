@@ -91,6 +91,7 @@ public class BaseDao {
                     pstmt.setObject(i+1, param[i]);
                 }
             }
+            System.out.println(pstmt);
             num = pstmt.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

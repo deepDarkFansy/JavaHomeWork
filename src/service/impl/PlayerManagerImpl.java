@@ -49,8 +49,8 @@ public class PlayerManagerImpl implements PlayerManage {
         params[0] = player.getPlayerID() + "";
         scoreList = scoreDao.getScore(sql, params);
         if(scoreList == null){
-            String sql_1 = "INSERT INTO score (?, ?)" +
-                    "VALUES (projectID, playerID)";
+            String sql_1 = "INSERT INTO score (projectID, playerID)" +
+                    "VALUES (?, ?)";
             String[] params_1 = new String[2];
             params_1[0] = project.getProjectID() + "";
             params_1[1] = player.getPlayerID() + "";
@@ -74,11 +74,11 @@ public class PlayerManagerImpl implements PlayerManage {
                 }
             }
             if(flag == 1){
-                String sql_2 = "INSERT INTO score (?, ?)" +
-                        "VALUES (projectID, playerID)";
+                String sql_2 = "INSERT INTO score (projectID, playerID) " +
+                        "VALUES (?, ?)";
                 String[] params_2 = new String[2];
-                params_1[0] = project.getProjectID() + "";
-                params_1[1] = player.getPlayerID() + "";
+                params_2[0] = project.getProjectID() + "";
+                params_2[1] = player.getPlayerID() + "";
                 scoreDao.updateScore(sql_2, params_2);
                 return true;
             }

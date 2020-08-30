@@ -1,21 +1,11 @@
 package etity;
 
-public class Score {
+public class Score implements Comparable<Score>{
     private int projectID;
     private int playerID;
     private String score;
-    private int rank;
+    private int rankIt;
 
-
-    @Override
-    public String toString() {
-        return "Score{" +
-                "projectID=" + projectID +
-                ", playerID=" + playerID +
-                ", score='" + score + '\'' +
-                ", rank=" + rank +
-                '}';
-    }
 
     public int getProjectID() {
         return projectID;
@@ -27,6 +17,24 @@ public class Score {
 
     public int getPlayerID() {
         return playerID;
+    }
+
+    @Override
+    public String toString() {
+        return "Score{" +
+                "projectID=" + projectID +
+                ", playerID=" + playerID +
+                ", score='" + score + '\'' +
+                ", rankIt=" + rankIt +
+                '}';
+    }
+
+    public int getRankIt() {
+        return rankIt;
+    }
+
+    public void setRankIt(int rankIt) {
+        this.rankIt = rankIt;
     }
 
     public void setPlayerID(int playerID) {
@@ -41,11 +49,31 @@ public class Score {
         this.score = score;
     }
 
-    public int getRank() {
-        return rank;
-    }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+
+    @Override
+    public int compareTo(Score o) {
+        if(score.endsWith("sec")){
+            String[] temp = score.split("min");
+            int min = Integer.valueOf(temp[0]);
+            String[] temp1 = temp[1].split("sec");
+            int sec = Integer.valueOf(temp1[0]);
+            temp = o.score.split("min");
+            int min1 = Integer.valueOf(temp[0]);
+            temp1 = temp[1].split("sec");
+            int sec1 = Integer.valueOf(temp1[0]);
+            if(min == min1){
+                return sec-sec1;
+            }else{
+                return min-min1;
+            }
+        }else if(score.endsWith("m")){
+            String[] temp = score.split("m");
+            int dis = Integer.valueOf(temp[0]);
+            temp = o.score.split("m");
+            int dis1 = Integer.valueOf(temp[0]);
+            return dis1 - dis;
+        }
+        return 0;
     }
 }

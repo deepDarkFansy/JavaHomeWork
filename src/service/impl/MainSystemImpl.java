@@ -1,6 +1,9 @@
 package service.impl;
 
+import dao.impl.PlayerDaoImpl;
+import dao.impl.ProjectDaoImpl;
 import etity.Player;
+import etity.Project;
 import service.MainSystem;
 import service.PlayerManage;
 
@@ -10,6 +13,7 @@ import java.util.Scanner;
 public class MainSystemImpl implements MainSystem {
     private IOManagerImpl IOManager = new IOManagerImpl();
     private PlayerManagerImpl playerManager = new PlayerManagerImpl();
+    private ScoreManagerImpl scoreManager = new ScoreManagerImpl();
 
     @Override
     public void run(){
@@ -17,11 +21,11 @@ public class MainSystemImpl implements MainSystem {
         // 循环控制条件
         boolean flag = true;
         // 选项
-        int option = -1;
         while(flag){
             IOManager.printMenu(0);
             System.out.print("您的选择是：  ");
             try{
+                int option;
                 option = input.nextInt();
                 switch (option){
                     case 1:
@@ -71,7 +75,9 @@ public class MainSystemImpl implements MainSystem {
                     IOManager.printCertainProject(input.next());
                     break;
                 case 3:
-                    Player player = IOManager.playerInput();
+                    Project project = IOManager.projectInput();
+                    ProjectDaoImpl projectDao = new ProjectDaoImpl();
+                    projectDao.insertProject(project);
                     break;
                 case 4:
                     return true;
@@ -90,7 +96,7 @@ public class MainSystemImpl implements MainSystem {
         while(true){
             IOManager.printMenu(2);
             System.out.print("您的选择是：  ");
-            option = input.nextInt();try{
+            try{
                 option = input.nextInt();
             }catch (Exception e){
                 System.out.println("您输入的选项有误，请重新输入！");
@@ -99,12 +105,25 @@ public class MainSystemImpl implements MainSystem {
             }
             switch (option){
                 case 1:
+                    IOManager.printPlayerList();
                     break;
                 case 2:
+                    System.out.print("请输入选手的名字： ");
+                    IOManager.printCertainPlayer(input.next());
                     break;
                 case 3:
+                    Player player = IOManager.playerInput();
+                    PlayerDaoImpl playerDao = new PlayerDaoImpl();
+                    playerDao.insertPlayer(player);
                     break;
                 case 4:
+                    System.out.print("请输入选手ID:  ");
+                    Player player1 = new Player();
+                    player1.setPlayerID(input.nextInt());
+                    System.out.print("请输入比赛ID:  ");
+                    Project project = new Project();
+                    project.setProjectID(input.nextInt());
+                    playerManager.takePart(player1, project);
                     break;
                 case 5:
                     return true;
@@ -127,6 +146,8 @@ public class MainSystemImpl implements MainSystem {
                 option = input.nextInt();
                 switch (option){
                     case 1:
+                        System.out.print("请输入你想记录的比赛项目:  ");
+                        scoreManager.recordIt(input.next());
                         break;
                     case 2:
                         break;
